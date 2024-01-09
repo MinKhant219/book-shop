@@ -14,6 +14,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
@@ -24,7 +25,7 @@ public class BookShopApplication {
     private final GenreDao genreDao;
     private final PublisherDao publisherDao;
 
-    @Bean @Transactional
+    @Bean @Transactional @Profile("data")
     public ApplicationRunner runner(){
         return r -> {
             Author author1 = new Author("Charles Dicken","charles@gamil.com");
