@@ -87,12 +87,7 @@ public class BookShopApplication {
 
             authorDao.save(author1);
             authorDao.save(author2);
-
-
-
         };
-
-
     }
 
     public static void main(String[] args) {
